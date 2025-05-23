@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Modern, poppy base styles */
+:root {
+  --primary: #7f5af0;
+  --secondary: #2cb67d;
+  --accent: #f15bb5;
+  --bg: #16161a;
+  --surface: #242629;
+  --text: #fffffe;
+  --text-secondary: #94a1b2;
+  --danger: #ff3864;
+  --radius: 12px;
+  --shadow: 0 4px 24px 0 rgba(127,90,240,0.10);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
+
+button {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+  background: var(--accent);
+  transform: translateY(-2px) scale(1.03);
+}
+
+input, select {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  outline: none;
+  transition: border 0.2s;
+}
+input:focus, select:focus {
+  border-color: var(--accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  margin-bottom: 0.5em;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2em;
+  margin: 1em 0;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+.gap-2 {
+  gap: 2em;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1em;
+  }
+  button {
+    width: 100%;
+  }
+}
