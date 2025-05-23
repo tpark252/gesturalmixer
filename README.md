@@ -9,7 +9,6 @@ A DJ mixing application with hand gesture controls powered by machine learning. 
   - ☝️ Index finger only: Low EQ control
   - ✌️ Peace sign: High EQ control
   - ✊ Closed fist: Reverb control
-  - 🖐️ Open palm: All controls mode
   
 - **Real-time Audio Visualization**: Beautiful 3D visualization that responds to your music
 - **Multiple Audio Sources**: Load tracks from local files or Spotify (Premium account required)
